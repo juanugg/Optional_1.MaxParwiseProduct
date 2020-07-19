@@ -48,6 +48,15 @@ int main() {
   int n;
   std::cin >> n;
   std::vector<int> numbers(n);
+
+  if (n<2)
+  {
+    std::cout << "Error: " << n << " numeros no es un conjunto suficientemente grande.\n";
+    std::cout << "Se deben indicar al menos dos numeros: n = 2.\n";
+    return 1;
+  }
+
+
   for (int i = 0; i < n; ++i) {
     std::cin >> numbers[i];
   }
