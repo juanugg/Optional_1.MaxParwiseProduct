@@ -45,25 +45,26 @@ int main() {
 
 //Entrada estandar
 
-  // int n;
-  // std::cin >> n;
-  // std::vector<int> numbers(n);
-  // for (int i = 0; i < n; ++i) {
-  //   std::cin >> numbers[i];
-  // }
+  int n;
+  std::cin >> n;
+  std::vector<int> numbers(n);
+  for (int i = 0; i < n; ++i) {
+    std::cin >> numbers[i];
+  }
 
 //Medición de los tiempos de computo
   time_t t0, t1, t2, t3;
 
 //Entradas para test de los tiempos
-  std::vector<int> numbers(10000, 0);
+  // std::vector<int> numbers(10000, 0);
 
 //Slow model
+/*
   time(&t0);
   std::cout << MaxPairwiseProduct(numbers) << "\n";
   time(&t1);
   double timeSlow = double(t1-t0);
-
+*/
 //Fast model
   time(&t2);
   std::cout << MaxPairwiseProductFast(numbers) << "\n";
@@ -71,12 +72,14 @@ int main() {
   double timeFast = double(t3-t2);
 
 //Timing output
-
+/*
   std::cout << "\n\nPrimera ejecucion"  <<"\n\n";
 
   std::cout << "  Tiempo de ejecucion Slow: "  << timeSlow <<"\n";
   std::cout << "  Tiempo de ejecucion Fast: "  << timeFast <<"\n";
+*/
 
+/*
 //Start StressTest
 std::cout << "\n\nComienza StressTest"  <<"\n\n";
 
@@ -118,6 +121,6 @@ std::cout << "\n\nComienza StressTest"  <<"\n\n";
     {
       break;
     }
-  }
+  }*/
   return 0;
 }
